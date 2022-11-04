@@ -1,0 +1,40 @@
+.grid-publication {
+    display: grid;
+    gap: var(--h-2);
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+}
+
+.post-tag {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+
+    color: var(--color-orange);
+}
+.post-title {
+    margin: var(--v-0_5) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin: var(--v-1) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: var(--color-gray);
+}

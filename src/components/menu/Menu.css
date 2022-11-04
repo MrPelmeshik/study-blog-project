@@ -1,0 +1,12 @@
+.navigation-menu-item {
+    text-decoration: none;
+    margin-left: var(--v-3);
+}
+.navigation-menu-item:link,
+.navigation-menu-item:visited {
+    color: var(--color-darkgray);
+}
+.navigation-menu-item:hover,
+.navigation-menu-item:active {
+    color: var(--color-orange);
+}

@@ -1,0 +1,23 @@
+.instagram-contact {
+    margin: var(--v-3) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+
+    text-align: center;
+}
+.line-inst-photos {
+    display: flex;
+    justify-items: stretch;
+    justify-content: space-evenly;
+}
+.line-inst-photos img {
+    width: calc(90vw/6);
+    aspect-ratio: 1/1;
+}
+
+/* Тут пустые классы */
+.instagram-block {}

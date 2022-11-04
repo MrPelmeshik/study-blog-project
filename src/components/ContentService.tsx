@@ -1,0 +1,413 @@
+import React from "react";
+import {IPublication} from "./main-content/publication/IPublication";
+import {ICategory} from "./main-content/sidebar/categories/ICategory";
+import {ISocialMedia} from "./main-content/sidebar/social-media/ISocialMedia";
+
+// region import photo
+import bitmap_0 from '../images/posts/Bitmap (0).png';
+import bitmap_1 from '../images/posts/Bitmap (1).png';
+import bitmap_2 from '../images/posts/Bitmap (2).png';
+import bitmap_3 from '../images/posts/Bitmap (3).png';
+import bitmap_4 from '../images/posts/Bitmap (4).png';
+import bitmap_5 from '../images/posts/Bitmap (5).png';
+import bitmap_6 from '../images/posts/Bitmap (6).png';
+import bitmap_7 from '../images/posts/Bitmap (7).png';
+import bitmap_8 from '../images/posts/Bitmap (8).png';
+import bitmap_9 from '../images/posts/Bitmap (9).png';
+import bitmap_10 from '../images/posts/Bitmap (10).png';
+import bitmap_11 from '../images/posts/Bitmap (11).png';
+import bitmap_12 from '../images/posts/Bitmap (12).png';
+import bitmap_13 from '../images/posts/Bitmap (13).png';
+import bitmap_14 from '../images/posts/Bitmap (14).png';
+import bitmap_15 from '../images/posts/Bitmap (15).png';
+import bitmap_16 from '../images/posts/Bitmap (16).png';
+import bitmap_17 from '../images/posts/Bitmap (17).png';
+import bitmap_18 from '../images/posts/Bitmap (18).png';
+import bitmap_19 from '../images/posts/Bitmap (19).png';
+import bitmap_20 from '../images/posts/Bitmap (20).png';
+// endregion
+
+// region import ico
+import facebookIco from '../images/ico/simple/facebook.svg';
+import pinterestIco from '../images/ico/simple/pinterest.svg';
+import vIco from '../images/ico/simple/v.svg';
+import globIco from '../images/ico/simple/glob.svg';
+import twitterIco from '../images/ico/simple/twitter.svg';
+import behanceIco from '../images/ico/simple/behance.svg';
+import instagramIco from '../images/ico/simple/instagram.svg';
+import youtubeIco from '../images/ico/simple/youtube.svg';
+import googlePlusIco from '../images/ico/simple/google_plus.svg';
+import {ITag} from "./main-content/sidebar/tags/ITag";
+import {IInstagramWidget} from "./instagram-block/widget/IInstagramWidget";
+// endregion
+
+export class ContentService {
+
+    readonly _publications: IPublication[] = [
+        {
+            postId: 0,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'Tourism',
+            photoUrl: bitmap_0,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 1,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'sport',
+            photoUrl: bitmap_1,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 2,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'fashion',
+            photoUrl: bitmap_2,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 3,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'clothes',
+            photoUrl: bitmap_3,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 4,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'clothes',
+            photoUrl: bitmap_4,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 5,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'fashion',
+            photoUrl: bitmap_5,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 6,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'Summer',
+            photoUrl: bitmap_6,
+            countComments: 6,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
+        },
+        {
+            postId: 7,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'Autumn',
+            photoUrl: bitmap_7,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 8,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'clothes',
+            photoUrl: bitmap_8,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 9,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'summer',
+            photoUrl: bitmap_9,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 10,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'summer',
+            photoUrl: bitmap_10,
+            countComments: 0,
+            annotation: ""
+        }
+    ];
+    readonly _featuredPublications: IPublication[] = [
+        {
+            postId: 11,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'jeans',
+            photoUrl: bitmap_11,
+            countComments: 12,
+            annotation: ""
+        },
+        {
+            postId: 13,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'City',
+            photoUrl: bitmap_13,
+            countComments: 0,
+            annotation: ""
+        },
+        {
+            postId: 14,
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
+            userName: 'Rickie Baroch',
+            tag: 'Photography',
+            photoUrl: bitmap_14,
+            countComments: 0,
+            annotation: ""
+        }
+    ];
+    readonly _aboutAuthorPublications: IPublication[] = [
+        {
+            postId: 15,
+            title: '',
+            datePublication: '',
+            userName: 'Kate Willems',
+            tag: 'Food & cooking bloger',
+            photoUrl: bitmap_12,
+            countComments: 0,
+            annotation: "Hi, I'm Sonia. Cooking is the way I express my creative\n" +
+                "side to the world. Welcome to my Kitchen Corner on…"
+        }
+    ];
+    readonly _categories: ICategory[] = [
+        {
+            categoryId: 0,
+            name: 'Fashion',
+            count: 23
+        },
+        {
+            categoryId: 1,
+            name: 'Style & clothes',
+            count: 7
+        },
+        {
+            categoryId: 2,
+            name: 'Minimalism',
+            count: 16
+        },
+        {
+            categoryId: 3,
+            name: 'Black & White',
+            count: 5
+        },
+        {
+            categoryId: 4,
+            name: 'Modern clothes',
+            count: 12
+        },
+    ];
+    readonly _socialMedia: ISocialMedia[] = [
+        {
+            socialMediaId: 0,
+            icoUrl: facebookIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 1,
+            icoUrl: pinterestIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 2,
+            icoUrl: vIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 3,
+            icoUrl: globIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 4,
+            icoUrl: twitterIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 5,
+            icoUrl: behanceIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 6,
+            icoUrl: instagramIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 7,
+            icoUrl: youtubeIco,
+            countLikes: 32000 ,
+        },
+        {
+            socialMediaId: 8,
+            icoUrl: googlePlusIco,
+            countLikes: 32000 ,
+        },
+    ];
+    readonly _tags: ITag[] = [
+        {
+            tagId: 0,
+            name: 'Business'
+        },
+        {
+            tagId: 1,
+            name: 'Freelance'
+        },
+        {
+            tagId: 2,
+            name: 'Money'
+        },
+        {
+            tagId: 3,
+            name: 'Experience'
+        },
+        {
+            tagId: 4,
+            name: 'Lifestyle'
+        },
+        {
+            tagId: 5,
+            name: 'SEO'
+        },
+        {
+            tagId: 6,
+            name: 'Wordpress'
+        },
+        {
+            tagId: 7,
+            name: 'Marketing'
+        },
+        {
+            tagId: 8,
+            name: 'UX'
+        },
+        {
+            tagId: 9,
+            name: 'Modern'
+        },
+        {
+            tagId: 10,
+            name: 'Success'
+        },
+        {
+            tagId: 11,
+            name: 'Nature'
+        }
+    ];
+    readonly _instagramWidgets: IInstagramWidget[] = [
+        {
+            instagramWidgetId: 0,
+            photoUrl: bitmap_15
+        },
+        {
+            instagramWidgetId: 1,
+            photoUrl: bitmap_16
+        },
+        {
+            instagramWidgetId: 2,
+            photoUrl: bitmap_17
+        },
+        {
+            instagramWidgetId: 3,
+            photoUrl: bitmap_18
+        },
+        {
+            instagramWidgetId: 4,
+            photoUrl: bitmap_19
+        },
+        {
+            instagramWidgetId: 5,
+            photoUrl: bitmap_20
+        }
+    ];
+
+    public getPublications(count: number) {
+        let publications: IPublication[] = [];
+        for (let i = 0; i < count; i++) {
+            publications.push(this._publications[i])
+        }
+        return publications;
+    }
+
+    public getFeaturedPublications(count: number) {
+        let publications: IPublication[] = [];
+        for (let i = 0; i < count; i++) {
+            publications.push(this._featuredPublications[i])
+        }
+        return publications;
+    }
+
+    public getAboutAuthor(count: number) {
+        let publications: IPublication[] = [];
+        for (let i = 0; i < count; i++) {
+            publications.push(this._aboutAuthorPublications[i])
+        }
+        return publications;
+    }
+
+    public getCategories(count: number) {
+        let categories: any[] = [];
+        for (let i = 0; i < count; i++) {
+            categories.push(this._categories[i])
+        }
+        return categories;
+    }
+
+    public getAllCategories() {
+        let categories: ICategory[] = [];
+        this._categories.forEach(category => categories.push(category));
+        return categories;
+    }
+
+    public getAllSocialMedia() {
+        let socialMediaList: ISocialMedia[] = [];
+        this._socialMedia.forEach(socialMedia => socialMediaList.push(socialMedia));
+        return socialMediaList;
+    }
+
+    public getAllTags() {
+        let tagList: ITag[] = [];
+        this._tags.forEach(tag => tagList.push(tag));
+        return tagList;
+    }
+
+    public getInstagramWidgets(count: number) {
+        let instagramWidgets: IInstagramWidget[] = [];
+        for (let i = 0; i < count; i++) {
+            instagramWidgets.push(this._instagramWidgets[i])
+        }
+        return instagramWidgets;
+    }
+}

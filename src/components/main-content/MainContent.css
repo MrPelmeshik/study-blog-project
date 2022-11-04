@@ -1,0 +1,9 @@
+.main-content {
+    margin: var(--v-6) var(--h-20);
+    display: grid;
+    place-items: center;
+    column-gap: var(--h-6);
+    grid-template-columns: 3fr 1fr;
+    align-items: flex-start;
+    justify-content: stretch;
+}

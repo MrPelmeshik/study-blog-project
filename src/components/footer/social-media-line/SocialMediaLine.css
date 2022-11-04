@@ -1,0 +1,36 @@
+.ico-facebook {
+    background-image: url("../../../images/ico/animated/facebook.svg");
+}
+.ico-facebook:hover {
+    background-image: url("../../../images/ico/animated/facebook active.svg");
+}
+.ico-twitter {
+    background-image: url("../../../images/ico/animated/twitter.svg");
+}
+.ico-twitter:hover {
+    background-image: url("../../../images/ico/animated/twitter active.svg");
+}
+.ico-pinterest {
+    background-image: url("../../../images/ico/animated/pinterest.svg");
+}
+.ico-pinterest:hover {
+    background-image: url("../../../images/ico/animated/pinterest active.svg");
+}
+.ico-googlePlay {
+    background-image: url("../../../images/ico/animated/google_plus.svg");
+}
+.ico-googlePlay:hover {
+    background-image: url("../../../images/ico/animated/google_plus active.svg");
+}
+.ico-behance {
+    background-image: url("../../../images/ico/animated/behance.svg");
+}
+.ico-behance:hover {
+    background-image: url("../../../images/ico/animated/behance active.svg");
+}
+.ico-instagram {
+    background-image: url("../../../images/ico/animated/instagram.svg");
+}
+.ico-instagram:hover {
+    background-image: url("../../../images/ico/animated/instagram active.svg");
+}

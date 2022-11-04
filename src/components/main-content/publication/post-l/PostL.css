@@ -1,0 +1,25 @@
+.post-l {
+    width: 100%;
+    grid-column: 1 / 3;
+    grid-row: 4;
+    box-shadow: 0 0 10px 3px var(--color-darkwhite);
+}
+.post-photo-l {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+.post-info-l {
+    margin: var(--v-2) var(--h-2);
+    display: flex;
+    flex-direction: column;
+}
+.post-annotation-l {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: var(--color-gray);
+}

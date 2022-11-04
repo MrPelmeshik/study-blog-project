@@ -1,0 +1,12 @@
+.header-left-block {}
+
+.navigation-menu {
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}

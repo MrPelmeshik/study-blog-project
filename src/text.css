@@ -1,0 +1,104 @@
+.text-sans-xxs {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-size: 10px;
+    line-height: 14px;
+}
+.text-serif-xxs {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 10px;
+    line-height: 14px;
+}
+.text-serif-italic-xxs {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-size: 10px;
+    line-height: 14px;
+}
+.text-sans-xs {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+.text-serif-xs {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+.text-sans-s {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+.text-serif-s {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+}
+.text-serif-italic-s {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-size: 14px;
+    line-height: 19px;
+}
+.text-serif-m {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 21px;
+}
+.text-serif-l {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+}
+.text-serif-xl {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 26px;
+}
+.text-serif-xxl {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 25px;
+    line-height: 33px;
+}
+.text-serif-xxxl {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 34px;
+    line-height: 38px;
+}
+
+.text-gray {
+    color: var(--color-gray);
+}
+.text-darkgray {
+    color: var(--color-darkgray);
+}
+.text-white {
+    color: var(--color-white);
+}
+.text-orange {
+    color: var(--color-orange);
+}
+.text-lightgray {
+    color: var(--color-lightgray);
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}

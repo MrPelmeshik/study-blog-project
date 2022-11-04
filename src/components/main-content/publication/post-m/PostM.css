@@ -1,0 +1,16 @@
+.post-m {
+    width: 100%;
+    box-shadow: 0 0 10px 3px var(--color-darkwhite);
+}
+.post-photo-m {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+.post-info-m {
+    margin: var(--v-1) var(--h-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
