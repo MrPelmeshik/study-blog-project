@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import './text.css';
-import './variable.css';
 import {App} from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.module.css';
+import './text.module.css';
+import './variable.module.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,5 +11,3 @@ const root = ReactDOM.createRoot(
 root.render(
     <App />
 );
-
-reportWebVitals();

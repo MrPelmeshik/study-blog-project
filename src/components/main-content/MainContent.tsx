@@ -1,10 +1,10 @@
 import React from "react";
-import './MainContent.css';
+import css from './MainContent.module.css';
 import {GridPublication} from "./grid-publication/GridPublication";
 import {Sidebar} from "./sidebar/Sidebar";
 
-export function MainContent() {
-    return <div className="main-content">
+export const MainContent = () => {
+    return <div className={css.main_content}>
         <GridPublication />
         <Sidebar />
     </div>

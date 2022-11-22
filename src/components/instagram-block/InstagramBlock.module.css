@@ -1,5 +1,5 @@
-.instagram-contact {
-    margin: var(--v-3) 0;
+.instagram_contact {
+    margin: var(--v__3) 0;
 
     font-family: 'PT Serif';
     font-style: normal;
@@ -9,15 +9,12 @@
 
     text-align: center;
 }
-.line-inst-photos {
+.line_inst_photos {
     display: flex;
     justify-items: stretch;
     justify-content: space-evenly;
 }
-.line-inst-photos img {
+.line_inst_photos img {
     width: calc(90vw/6);
     aspect-ratio: 1/1;
 }
-
-/* Тут пустые классы */
-.instagram-block {}

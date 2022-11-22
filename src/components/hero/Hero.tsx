@@ -1,20 +1,22 @@
 import React from "react";
-import './Hero.css';
+import css from './Hero.module.css';
+import indexCss from '../../index.module.css';
+import textCss from '../../text.module.css';
 
-export function Hero() {
-    return <div className="hero">
-        <div className="hero-gradient-bg"></div>
-        <div className="hero-text">
-            <div className="hero-tag">Vehicle</div>
-            <div className="hero-title">
+export const Hero = () => {
+    return <div className={css.hero}>
+        <div className={css.hero_gradient_bg}/>
+        <div className={css.hero_text}>
+            <div className={css.hero_tag}>Vehicle</div>
+            <div className={css.hero_title}>
                 <p>
                     One of Saturn’s largest rings<br/>
                     may be newer than anyone
                 </p>
             </div>
-            <div className="hero-meta">
+            <div className={css.hero_meta}>
                 June 6, 2019
-                <p className="padding-h-s"><span className="text-lightgray">By</span> Rickie Baroch</p>
+                <p className={indexCss.padding_h_s}><span className={textCss.text_lightgray}>By</span> Rickie Baroch</p>
                 4 comments
             </div>
         </div>

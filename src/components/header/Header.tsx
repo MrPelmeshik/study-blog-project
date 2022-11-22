@@ -1,11 +1,12 @@
 import React from 'react';
-import './Header.css';
-import {HeaderRightBlock} from "./header-right-block/HeaderRightBlock";
+import css from './Header.module.css';
 import {HeaderLeftBlock} from "./header-left-block/HeaderLeftBlock";
+import {HeaderRightBlock} from "./header-right-block/HeaderRightBlock";
 
-export function Header() {
-    return <header>
-        <HeaderRightBlock/>
+
+export const Header = () => {
+    return <div className={css.header}>
         <HeaderLeftBlock/>
-    </header>
+        <HeaderRightBlock/>
+    </div>
 }

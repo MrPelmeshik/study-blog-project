@@ -1,13 +1,13 @@
 import React from "react";
-import './SocialMediaLine.css';
+import css from './SocialMediaLine.module.css';
 
-export function SocialMediaLine() {
+export const SocialMediaLine = () => {
     return <>
-        <div className="ico ico-facebook"></div>
-        <div className="ico ico-twitter"></div>
-        <div className="ico ico-pinterest"></div>
-        <div className="ico ico-googlePlay"></div>
-        <div className="ico ico-behance"></div>
-        <div className="ico ico-instagram"></div>
+        <div className={[css.ico, css.ico_facebook].join(' ')}/>
+        <div className={[css.ico, css.ico_twitter].join(' ')}/>
+        <div className={[css.ico, css.ico_pinterest].join(' ')}/>
+        <div className={[css.ico, css.ico_googlePlay].join(' ')}/>
+        <div className={[css.ico, css.ico_behance].join(' ')}/>
+        <div className={[css.ico, css.ico_instagram].join(' ')}/>
     </>
 }

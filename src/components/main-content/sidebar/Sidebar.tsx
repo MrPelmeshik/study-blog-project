@@ -1,13 +1,9 @@
 import React from "react";
-import './Sidebar.css';
-import {FeaturedPublication} from "./featured-publication/FeaturedPublication";
-import {AboutAuthor} from "./about-author/AboutAuthor";
-import {Categories} from "./categories/Categories";
-import {SocialMedia} from "./social-media/SocialMedia";
-import {Tags} from "./tags/Tags";
+import css from './Sidebar.module.css'
+import {AboutAuthor, Categories, FeaturedPublication, SocialMedia, Tags} from './Sidebar.module'
 
-export function Sidebar() {
-    return <div className="sidebar">
+export const Sidebar = () => {
+    return <div className={css.sidebar}>
         <AboutAuthor />
         <FeaturedPublication />
         <Categories />

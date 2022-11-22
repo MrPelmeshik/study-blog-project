@@ -1,6 +1,10 @@
-.header-left-block {}
+.header_right_block {
+    display: flex;
+    float: left;
+    align-items: center;
+}
 
-.navigation-menu {
+.navigation_menu {
     display: flex;
     flex-direction: row;
 

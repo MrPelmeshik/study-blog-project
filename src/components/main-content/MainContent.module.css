@@ -1,8 +1,8 @@
-.main-content {
-    margin: var(--v-6) var(--h-20);
+.main_content {
+    margin: var(--v__6) var(--h__20);
     display: grid;
     place-items: center;
-    column-gap: var(--h-6);
+    column-gap: var(--h__6);
     grid-template-columns: 3fr 1fr;
     align-items: flex-start;
     justify-content: stretch;

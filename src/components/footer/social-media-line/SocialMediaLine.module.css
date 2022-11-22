@@ -1,36 +1,43 @@
-.ico-facebook {
+.ico {
+    margin: 0 var(--v__0_5);
+    width: var(--v__4);
+    height: var(--v__4);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ico_facebook {
     background-image: url("../../../images/ico/animated/facebook.svg");
 }
-.ico-facebook:hover {
+.ico_facebook:hover {
     background-image: url("../../../images/ico/animated/facebook active.svg");
 }
-.ico-twitter {
+.ico_twitter {
     background-image: url("../../../images/ico/animated/twitter.svg");
 }
-.ico-twitter:hover {
+.ico_twitter:hover {
     background-image: url("../../../images/ico/animated/twitter active.svg");
 }
-.ico-pinterest {
+.ico_pinterest {
     background-image: url("../../../images/ico/animated/pinterest.svg");
 }
-.ico-pinterest:hover {
+.ico_pinterest:hover {
     background-image: url("../../../images/ico/animated/pinterest active.svg");
 }
-.ico-googlePlay {
+.ico_googlePlay {
     background-image: url("../../../images/ico/animated/google_plus.svg");
 }
-.ico-googlePlay:hover {
+.ico_googlePlay:hover {
     background-image: url("../../../images/ico/animated/google_plus active.svg");
 }
-.ico-behance {
+.ico_behance {
     background-image: url("../../../images/ico/animated/behance.svg");
 }
-.ico-behance:hover {
+.ico_behance:hover {
     background-image: url("../../../images/ico/animated/behance active.svg");
 }
-.ico-instagram {
+.ico_instagram {
     background-image: url("../../../images/ico/animated/instagram.svg");
 }
-.ico-instagram:hover {
+.ico_instagram:hover {
     background-image: url("../../../images/ico/animated/instagram active.svg");
 }

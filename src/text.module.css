@@ -1,34 +1,34 @@
-.text-sans-xxs {
+.text_sans_xxs {
     font-family: 'PT Sans';
     font-style: normal;
     font-size: 10px;
     line-height: 14px;
 }
-.text-serif-xxs {
+.text_serif_xxs {
     font-family: 'PT Serif';
     font-style: normal;
     font-size: 10px;
     line-height: 14px;
 }
-.text-serif-italic-xxs {
+.text_serif_italic_xxs {
     font-family: 'PT Serif';
     font-style: italic;
     font-size: 10px;
     line-height: 14px;
 }
-.text-sans-xs {
+.text_sans_xs {
     font-family: 'PT Sans';
     font-style: normal;
     font-size: 12px;
     line-height: 16px;
 }
-.text-serif-xs {
+.text_serif_xs {
     font-family: 'PT Serif';
     font-style: normal;
     font-size: 12px;
     line-height: 16px;
 }
-.text-sans-s {
+.text_sans_s {
     font-family: 'PT Sans';
     font-style: normal;
     font-size: 14px;
@@ -40,65 +40,65 @@
     font-size: 14px;
     line-height: 19px;
 }
-.text-serif-italic-s {
+.text_serif_italic_s {
     font-family: 'PT Serif';
     font-style: italic;
     font-size: 14px;
     line-height: 19px;
 }
-.text-serif-m {
+.text_serif_m {
     font-family: 'PT Serif';
     font-style: normal;
     font-size: 16px;
     line-height: 21px;
 }
-.text-serif-l {
+.text_serif_l {
     font-family: 'PT Serif';
     font-style: normal;
     font-size: 18px;
     line-height: 26px;
 }
-.text-serif-xl {
+.text_serif_xl {
     font-family: 'PT Serif';
     font-style: normal;
     font-size: 20px;
     line-height: 26px;
 }
-.text-serif-xxl {
+.text_serif_xxl {
     font-family: 'PT Serif';
     font-style: normal;
     font-size: 25px;
     line-height: 33px;
 }
-.text-serif-xxxl {
+.text_serif_xxxl {
     font-family: 'PT Serif';
     font-style: normal;
     font-size: 34px;
     line-height: 38px;
 }
 
-.text-gray {
-    color: var(--color-gray);
+.text_gray {
+    color: var(--color_gray);
 }
-.text-darkgray {
-    color: var(--color-darkgray);
+.text_darkgray {
+    color: var(--color_darkgray);
 }
-.text-white {
-    color: var(--color-white);
+.text_white {
+    color: var(--color_white);
 }
-.text-orange {
-    color: var(--color-orange);
+.text_orange {
+    color: var(--color_orange);
 }
-.text-lightgray {
-    color: var(--color-lightgray);
+.text_lightgray {
+    color: var(--color_lightgray);
 }
 
-.text-upper {
+.text_upper {
     text-transform: uppercase;
 }
-.text-center {
+.text_center {
     text-align: center;
 }
-.text-left {
+.text_left {
     text-align: left;
 }

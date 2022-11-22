@@ -1,7 +1,9 @@
 import React from "react";
-import {IPublication} from "./main-content/publication/IPublication";
+import {IPublication} from "./main-content/publication/Publication.module";
 import {ICategory} from "./main-content/sidebar/categories/ICategory";
 import {ISocialMedia} from "./main-content/sidebar/social-media/ISocialMedia";
+import {ITag} from "./main-content/sidebar/tags/ITag";
+import {IInstagramWidget} from "./instagram-block/widget/InstagramWidget";
 
 // region import photo
 import bitmap_0 from '../images/posts/Bitmap (0).png';
@@ -37,8 +39,6 @@ import behanceIco from '../images/ico/simple/behance.svg';
 import instagramIco from '../images/ico/simple/instagram.svg';
 import youtubeIco from '../images/ico/simple/youtube.svg';
 import googlePlusIco from '../images/ico/simple/google_plus.svg';
-import {ITag} from "./main-content/sidebar/tags/ITag";
-import {IInstagramWidget} from "./instagram-block/widget/IInstagramWidget";
 // endregion
 
 export class ContentService {

@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
+import css from '../Sidebar.module.css';
 import {ContentService} from "../../../ContentService";
-import {PostS} from "../../publication/post-s/PostS";
+import {PostS} from "../../publication/Publication.module";
 
-export function FeaturedPublication() {
-    const countFeaturedPublicationsInSidebar = 3;
 
-    const publicationService = new ContentService();
-    const publications = publicationService.getFeaturedPublications(countFeaturedPublicationsInSidebar);
+const countFeaturedPublicationsInSidebar = 3;
+
+export const FeaturedPublication = () => {
+    const [contentService, setContentService] = useState(new ContentService());
+    const publications = contentService.getFeaturedPublications(countFeaturedPublicationsInSidebar);
 
     const featuredPublicationsInSidebar: any[] = [];
     for (let i = 0; i < countFeaturedPublicationsInSidebar; i++) {
@@ -14,7 +16,7 @@ export function FeaturedPublication() {
     }
 
     return <>
-        <div className="sidebar-title">Featured posts</div>
+        <div className={css.sidebar_title}>Featured posts</div>
         {featuredPublicationsInSidebar}
     </>
 }

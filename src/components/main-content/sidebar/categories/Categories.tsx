@@ -1,27 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import {ContentService} from "../../../ContentService";
+import css from '../Sidebar.module.css';
 
-export function Categories() {
-    const contentService = new ContentService();
+export const Categories = () => {
+    const [contentService, setContentService] = useState(new ContentService());
     const categories = contentService.getAllCategories();
 
     const categoriesInSidebar: any[] = [];
-    const lenght = categories.length;
-    for (let i = 0; i < lenght; i++) {
+    const length = categories.length;
+    for (let i = 0; i < length; i++) {
         categoriesInSidebar.push(
-            <div className="categories-item">
+            <div className={css.categories_item}>
                 <div>{categories[i].name}</div>
                 <div>({categories[i].count})</div>
             </div>
         )
 
-        if (i < lenght - 1)
+        if (i < length - 1)
             categoriesInSidebar.push(<hr/>)
     }
 
     return <>
-        <div className="sidebar-title">Categories</div>
-        <div className="categories">
+        <div className={css.sidebar_title}>Categories</div>
+        <div className={css.categories}>
             {categoriesInSidebar}
         </div>
     </>

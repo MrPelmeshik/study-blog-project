@@ -1,5 +1,5 @@
-header {
+.header {
     display: flex;
     justify-content: space-between;
-    margin: var(--v-3) var(--h-5);
+    margin: var(--v__3) var(--h__5);
 }

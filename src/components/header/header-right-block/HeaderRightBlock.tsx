@@ -1,9 +1,11 @@
 import React from "react";
-import './HeaderRightBlock.css';
+import css from './HeaderRightBlock.module.css';
+import {Menu} from "../../menu/Menu";
 
-export function HeaderRightBlock() {
-    return <div className="header-left-block">
-            <b className="text-logo">FASHION</b>
-            <div className="line-for-logo"></div>
+export const HeaderRightBlock = () => {
+    return <div className={css.header_right_block}>
+        <div className={css.navigation_menu}>
+            <Menu/>
+        </div>
     </div>
 }

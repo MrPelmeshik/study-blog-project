@@ -1,0 +1,38 @@
+:root {
+    --hero_height: 70vh;
+
+    /* color */
+    --color_white: #FFFFFF;
+    --color_darkgray: #171717;
+    --color_lightgray: #B1B1B1;
+    --color_darkwhite: #F1F1F1;
+    --color_gray: #666666;
+    --color_orange: #C9A96E;
+
+    /* vh */
+    --v__0_5: 0.5vh;
+    --v__1: 1vh;
+    --v__1_5: 1.5vh;
+    --v__2: 2vh;
+    --v__3: 3vh;
+    --v__4: 4vh;
+    --v__5: 5vh;
+    --v__6: 6vh;
+    --v__8: 8vh;
+    --v__10: 10vh;
+
+    /* vw */
+    --h__0_5: 0.5vw;
+    --h__1: 1vw;
+    --h__1_5: 1.5vw;
+    --h__2: 2vw;
+    --h__3: 3vw;
+    --h__4: 4vw;
+    --h__5: 5vw;
+    --h__6: 6vw;
+    --h__7: 7vw;
+    --h__8: 8vw;
+    --h__10: 10vw;
+    --h__20: 20vw;
+    --h__40: 40vw;
+}

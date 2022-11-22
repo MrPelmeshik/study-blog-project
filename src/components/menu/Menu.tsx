@@ -1,12 +1,31 @@
-import React from 'react';
-import './Menu.css';
+import React, {useState} from 'react';
+import {MenuButton, IMenuButton} from "./menu-button/MenuButton";
 
-export function Menu() {
-    return <>
-        <a className="navigation-menu-item btn-open-modal" data-modaltype="home" href="#">Home</a>
-        <a className="navigation-menu-item btn-open-modal" data-modaltype="recipes" href="#">Recipes</a>
-        <a className="navigation-menu-item btn-open-modal" data-modaltype="article" href="#">Article</a>
-        <a className="navigation-menu-item btn-open-modal" data-modaltype="contact" href="#">Contact</a>
-        <a className="navigation-menu-item btn-open-modal" data-modaltype="purchase" href="#">Purchase</a>
-    </>
+const menuButtonList: IMenuButton[] = [
+    {
+        lable: 'Home',
+        url: '#'
+    },
+    {
+        lable: 'Recipes',
+        url: '#'
+    },
+    {
+        lable: 'Article',
+        url: '#'
+    },
+    {
+        lable: 'Contact',
+        url: '#'
+    },
+    {
+        lable: 'Purchase',
+        url: '#'
+    },
+]
+
+export const Menu = () => {
+    const [menuButtonsOnPage, setmenuButtonsOnPage] = useState(menuButtonList.map(menuButton => <MenuButton menuButton={menuButton}/>));
+
+    return <>{menuButtonsOnPage}</>
 }

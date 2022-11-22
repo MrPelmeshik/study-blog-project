@@ -1,0 +1,178 @@
+.post_tag {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+
+    color: var(--color_orange);
+}
+.post_title {
+    margin: var(--v__0_5) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
+.post_meta {
+    display: flex;
+    align-items: center;
+    margin: var(--v__1) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: var(--color_gray);
+}
+
+/*region styles from S-size*/
+.post_s {
+    width: 100%;
+    margin: var(--v__3) 0;
+    box-shadow: 0 0 10px 3px var(--color_darkwhite);
+}
+.post_photo_s {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.post_info_s {
+    margin: var(--v__1) var(--h__1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.post_tag_s {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+
+    color: var(--color_orange);
+}
+.post_title_s {
+    margin: var(--v__0_5) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+.post_meta_s {
+    display: flex;
+    align-items: center;
+    margin: var(--v__1) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: var(--color_gray);
+}
+.post_annotation_s {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: var(--color_gray);
+}
+.post_author_s {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+}
+.post_author_post_s {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: var(--color_lightgray);
+}
+.post_author_appeal_s {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: var(--color_gray);
+}
+.post_author_button_s {
+    margin: var(--v__1_5) 0;
+
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    text-transform: uppercase;
+}
+/*endregion*/
+
+/*region styles from M-size*/
+.post_m {
+    width: 100%;
+    box-shadow: 0 0 10px 3px var(--color_darkwhite);
+}
+.post_photo_m {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+.post_info_m {
+    margin: var(--v__1) var(--h__2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/*endregion*/
+
+/*region styles from L-size*/
+.post_l {
+    width: 100%;
+    grid-column: 1 / 3;
+    grid-row: 4;
+    box-shadow: 0 0 10px 3px var(--color_darkwhite);
+}
+.post_photo_l {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+.post_info_l {
+    margin: var(--v__2) var(--h__2);
+    display: flex;
+    flex-direction: column;
+}
+.post_annotation_l {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: var(--color_gray);
+}
+/*endregion*/

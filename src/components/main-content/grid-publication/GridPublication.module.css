@@ -1,0 +1,6 @@
+.grid_publication {
+    display: grid;
+    gap: var(--h__2);
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+}
