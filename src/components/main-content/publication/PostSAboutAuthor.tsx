@@ -4,8 +4,9 @@ import indexCss from '../../../index.module.css';
 import {IPublication} from "./Publication.module";
 
 
-export const PostSAboutAuthor: React.FC<{ post: IPublication }> = ({ post }) => {
-    return <div className={css.post_s}>
+export const PostSAboutAuthor: React.FC<{ setModalWindow:  React.Dispatch<React.SetStateAction<number | null>>, post: IPublication }> = ({ setModalWindow, post }) => {
+    return <div className={css.post_s}
+                onClick={() => setModalWindow(post.postId)}>
         <img className={css.post_photo_s} src={post.photoUrl}/>
         <div className={css.post_info_s}>
             <b className={css.post_author_s}>{post.userName}</b>

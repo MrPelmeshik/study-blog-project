@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {IPublication} from "./main-content/publication/Publication.module";
 import {ICategory} from "./main-content/sidebar/categories/ICategory";
 import {ISocialMedia} from "./main-content/sidebar/social-media/ISocialMedia";
@@ -29,7 +29,7 @@ import bitmap_19 from '../images/posts/Bitmap (19).png';
 import bitmap_20 from '../images/posts/Bitmap (20).png';
 // endregion
 
-// region import ico
+// region import icos
 import facebookIco from '../images/ico/simple/facebook.svg';
 import pinterestIco from '../images/ico/simple/pinterest.svg';
 import vIco from '../images/ico/simple/v.svg';
@@ -41,18 +41,27 @@ import youtubeIco from '../images/ico/simple/youtube.svg';
 import googlePlusIco from '../images/ico/simple/google_plus.svg';
 // endregion
 
+
+export const fetchGetRandomQuote = (): Promise<any> => {
+    return fetch(
+        `http://api.forismatic.com/api/1.0/?method=getQuote&format=json`
+    ).then((response) => response.json());
+};
+
 export class ContentService {
 
     readonly _publications: IPublication[] = [
         {
-            postId: 0,
+            postId: 16,
             title: 'One of Saturn’s largest rings may be newer than anyone',
             datePublication: 'June 6, 2019',
             userName: 'Rickie Baroch',
             tag: 'Tourism',
             photoUrl: bitmap_0,
-            countComments: 0,
-            annotation: ""
+            countComments: 10,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 1,
@@ -61,8 +70,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'sport',
             photoUrl: bitmap_1,
-            countComments: 0,
-            annotation: ""
+            countComments: 10,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 2,
@@ -71,8 +82,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'fashion',
             photoUrl: bitmap_2,
-            countComments: 0,
-            annotation: ""
+            countComments: 20,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 3,
@@ -81,8 +94,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'clothes',
             photoUrl: bitmap_3,
-            countComments: 0,
-            annotation: ""
+            countComments: 10,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 4,
@@ -91,8 +106,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'clothes',
             photoUrl: bitmap_4,
-            countComments: 0,
-            annotation: ""
+            countComments: 80,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 5,
@@ -101,8 +118,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'fashion',
             photoUrl: bitmap_5,
-            countComments: 0,
-            annotation: ""
+            countComments: 70,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 6,
@@ -123,8 +142,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'Autumn',
             photoUrl: bitmap_7,
-            countComments: 0,
-            annotation: ""
+            countComments: 50,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 8,
@@ -133,8 +154,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'clothes',
             photoUrl: bitmap_8,
-            countComments: 0,
-            annotation: ""
+            countComments: 30,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 9,
@@ -143,8 +166,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'summer',
             photoUrl: bitmap_9,
-            countComments: 0,
-            annotation: ""
+            countComments: 20,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 10,
@@ -153,8 +178,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'summer',
             photoUrl: bitmap_10,
-            countComments: 0,
-            annotation: ""
+            countComments: 10,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         }
     ];
     readonly _featuredPublications: IPublication[] = [
@@ -166,7 +193,9 @@ export class ContentService {
             tag: 'jeans',
             photoUrl: bitmap_11,
             countComments: 12,
-            annotation: ""
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 13,
@@ -175,8 +204,10 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'City',
             photoUrl: bitmap_13,
-            countComments: 0,
-            annotation: ""
+            countComments: 20,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         },
         {
             postId: 14,
@@ -185,19 +216,21 @@ export class ContentService {
             userName: 'Rickie Baroch',
             tag: 'Photography',
             photoUrl: bitmap_14,
-            countComments: 0,
-            annotation: ""
+            countComments: 10,
+            annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+                "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+                "error sit voluptatem accusantium doloremque laudantium, totam rem"
         }
     ];
     readonly _aboutAuthorPublications: IPublication[] = [
         {
             postId: 15,
-            title: '',
-            datePublication: '',
+            title: 'One of Saturn’s largest rings may be newer than anyone',
+            datePublication: 'June 6, 2019',
             userName: 'Kate Willems',
             tag: 'Food & cooking bloger',
             photoUrl: bitmap_12,
-            countComments: 0,
+            countComments: 40,
             annotation: "Hi, I'm Sonia. Cooking is the way I express my creative\n" +
                 "side to the world. Welcome to my Kitchen Corner on…"
         }
@@ -234,46 +267,55 @@ export class ContentService {
             socialMediaId: 0,
             icoUrl: facebookIco,
             countLikes: 32000 ,
+            color: '#3b5998'
         },
         {
             socialMediaId: 1,
             icoUrl: pinterestIco,
             countLikes: 32000 ,
+            color: '#E60023'
         },
         {
             socialMediaId: 2,
             icoUrl: vIco,
             countLikes: 32000 ,
+            color: '#ddd739'
         },
         {
             socialMediaId: 3,
             icoUrl: globIco,
             countLikes: 32000 ,
+            color: '#1cff'
         },
         {
             socialMediaId: 4,
             icoUrl: twitterIco,
             countLikes: 32000 ,
+            color: '#1FAEE9'
         },
         {
             socialMediaId: 5,
             icoUrl: behanceIco,
             countLikes: 32000 ,
+            color: '#131418'
         },
         {
             socialMediaId: 6,
             icoUrl: instagramIco,
             countLikes: 32000 ,
+            color: '#E1306C'
         },
         {
             socialMediaId: 7,
             icoUrl: youtubeIco,
             countLikes: 32000 ,
+            color: '#c4302b'
         },
         {
             socialMediaId: 8,
             icoUrl: googlePlusIco,
             countLikes: 32000 ,
+            color: '#dd4b39'
         },
     ];
     readonly _tags: ITag[] = [
@@ -352,6 +394,53 @@ export class ContentService {
             photoUrl: bitmap_20
         }
     ];
+    readonly defaultPublication: IPublication = {
+        postId: 0,
+        title: 'Упс, пост с таким айди не найден...',
+        datePublication: 'June 6, 2019',
+        userName: 'Нет пользователя',
+        tag: 'Отсутствует',
+        photoUrl: '',
+        countComments: 0,
+        annotation: "Такой публикации нет!"
+    }
+
+
+    public getAllPosts = async ({set}: { set: any }) => {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/`, {method: 'GET'});
+        const jsonData: any[] = await response.json();
+        console.log(jsonData)
+        if (jsonData) {
+            set(jsonData.map(post => ({
+                postId: post.id,
+                title: post.title,
+                datePublication: this.getPublicationsById(post.id).datePublication,
+                userName: this.getPublicationsById(post.id).userName,
+                tag: this.getPublicationsById(post.id).tag,
+                photoUrl: this.getPublicationsById(post.id).photoUrl,
+                countComments: this.getPublicationsById(post.id).countComments,
+                annotation: this.getPublicationsById(post.id).annotation
+            })))
+        }
+        else {
+            set(this.defaultPublication)
+        }
+    };
+    public fetchPosts() {
+        return fetch(`https://jsonplaceholder.typicode.com/posts/`, {method: 'GET'})
+            .then(response => response.json());
+    }
+    private fetchPostById(postId: number) {
+        console.log('postId', postId);
+        return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {method: 'GET'})
+            .then(response => response.json());
+    }
+    private fetchUserById(userId: number) {
+        console.log('userId', userId);
+        return fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {method: 'GET'})
+            .then(response => response.json());
+    }
+
 
     public getPublications(count: number) {
         let publications: IPublication[] = [];
@@ -359,6 +448,13 @@ export class ContentService {
             publications.push(this._publications[i])
         }
         return publications;
+    }
+
+    public getPublicationsById(id: number) {
+        return this._publications.filter(publication => publication.postId === id)[0] ??
+            this._featuredPublications.filter(publication => publication.postId === id)[0] ??
+            this._aboutAuthorPublications.filter(publication => publication.postId === id)[0] ??
+            this.defaultPublication;
     }
 
     public getFeaturedPublications(count: number) {

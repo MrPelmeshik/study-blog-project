@@ -12,7 +12,7 @@ export const InstagramBlock = () => {
 
     const instagramWidgetsInSidebar: any[] = [];
     for (let i = 0; i < countInstagramWidgetsInSidebar; i++) {
-        instagramWidgetsInSidebar.push(<InstagramWidget instagramWidget={instagramWidgets[i]}/>);
+        instagramWidgetsInSidebar.push(<InstagramWidget key={instagramWidgets[i].instagramWidgetId} instagramWidget={instagramWidgets[i]}/>);
     }
 
     return <div>
@@ -22,3 +22,5 @@ export const InstagramBlock = () => {
         </div>
     </div>
 }
+
+// https://codepen.io/Oral_Seventhplanet/pen/Bazxpdq

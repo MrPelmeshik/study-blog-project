@@ -1,15 +1,16 @@
-import React, {useState} from "react";
+import React, {ReactElement, useState} from "react";
 import {ContentService} from "../../../ContentService";
 import css from '../Sidebar.module.css';
+import {ITag} from "./ITag";
 
 export function Tags() {
     const [contentService, setContentService] = useState(new ContentService());
     const tagList = contentService.getAllTags();
 
-    const socialMediaInSidebar: any[] = [];
+    const socialMediaInSidebar: ReactElement<{ post: ITag }>[] = [];
     const length = tagList.length;
     tagList.forEach(tag =>
-        socialMediaInSidebar.push(<div className={css.tag}>{tag.name}</div>)
+        socialMediaInSidebar.push(<div key={tag.tagId} className={css.tag}>{tag.name}</div>)
     )
 
     return <>

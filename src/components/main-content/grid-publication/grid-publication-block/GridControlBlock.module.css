@@ -11,7 +11,7 @@
     grid-template-columns: 3fr repeat(5, 1fr) 3fr;
     justify-content: stretch;
 
-    font-family: 'MuchaLike';
+    /*font-family: 'MuchaLike';*/
     font-size: 16px;
     line-height: 16px;
     font-weight: normal;

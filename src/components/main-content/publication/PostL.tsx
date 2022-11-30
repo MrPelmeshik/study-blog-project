@@ -5,8 +5,9 @@ import textCss from '../../../text.module.css';
 import {IPublication} from "./Publication.module";
 
 
-export const PostL: React.FC<{ post: IPublication }> = ({ post }) => {
-        return <div className={css.post_l}>
+export const PostL: React.FC<{ setModalWindow:  React.Dispatch<React.SetStateAction<number | null>>, post: IPublication }> = ({ setModalWindow, post }) => {
+        return <div className={css.post_l}
+                    onClick={() => setModalWindow(post.postId)}>
             <img className={css.post_photo_l} src={post.photoUrl}/>
             <div className={css.post_info_l}>
                 <div className={css.post_tag}>{post.tag}</div>

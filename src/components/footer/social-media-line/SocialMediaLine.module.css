@@ -4,6 +4,16 @@
     height: var(--v__4);
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.2s;
+}
+.ico:hover {
+    margin: 0 var(--v__0_5);
+    width: var(--v__4);
+    height: var(--v__4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1.05);
+    transition: 0.2s;
 }
 .ico_facebook {
     background-image: url("../../../images/ico/animated/facebook.svg");

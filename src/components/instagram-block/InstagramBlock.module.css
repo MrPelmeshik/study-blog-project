@@ -17,4 +17,11 @@
 .line_inst_photos img {
     width: calc(90vw/6);
     aspect-ratio: 1/1;
+    transition: 0.5s;
+}
+.line_inst_photos img:hover {
+    width: calc(90vw/6);
+    aspect-ratio: 1/1;
+    transform: scale(1.05);
+    transition: 0.5s;
 }

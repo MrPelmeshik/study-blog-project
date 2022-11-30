@@ -25,7 +25,7 @@ const menuButtonList: IMenuButton[] = [
 ]
 
 export const Menu = () => {
-    const [menuButtonsOnPage, setmenuButtonsOnPage] = useState(menuButtonList.map(menuButton => <MenuButton menuButton={menuButton}/>));
+    const [menuButtonsOnPage, setmenuButtonsOnPage] = useState(menuButtonList.map(menuButton => <MenuButton key={menuButton.lable} menuButton={menuButton}/>));
 
     return <>{menuButtonsOnPage}</>
 }
