@@ -1,5 +1,3 @@
-Pages: <a href='mrpelmeshik.github.io'>mrpelmeshik.github.io<a/>
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
