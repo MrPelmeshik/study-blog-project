@@ -406,40 +406,53 @@ export class ContentService {
     }
 
 
-    public getAllPosts = async ({set}: { set: any }) => {
+    public getPosts = async ({set}: { set: any }) => {
         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/`, {method: 'GET'});
         const jsonData: any[] = await response.json();
-        console.log(jsonData)
         if (jsonData) {
-            set(jsonData.map(post => ({
-                postId: post.id,
-                title: post.title,
-                datePublication: this.getPublicationsById(post.id).datePublication,
-                userName: this.getPublicationsById(post.id).userName,
-                tag: this.getPublicationsById(post.id).tag,
-                photoUrl: this.getPublicationsById(post.id).photoUrl,
-                countComments: this.getPublicationsById(post.id).countComments,
-                annotation: this.getPublicationsById(post.id).annotation
-            })))
+            set(jsonData.map(post => {
+                const mockPublication = this.getPublicationsById(post.id);
+                return {
+                    postId: post.id,
+                    title: post.title,
+                    datePublication: mockPublication.datePublication,
+                    userName: mockPublication.userName,
+                    tag: mockPublication.tag,
+                    photoUrl: mockPublication.photoUrl,
+                    countComments: mockPublication.countComments,
+                    annotation: mockPublication.annotation
+                }
+            }))
         }
         else {
             set(this.defaultPublication)
         }
     };
-    public fetchPosts() {
-        return fetch(`https://jsonplaceholder.typicode.com/posts/`, {method: 'GET'})
-            .then(response => response.json());
-    }
-    private fetchPostById(postId: number) {
-        console.log('postId', postId);
-        return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {method: 'GET'})
-            .then(response => response.json());
-    }
-    private fetchUserById(userId: number) {
-        console.log('userId', userId);
-        return fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {method: 'GET'})
-            .then(response => response.json());
-    }
+
+    public getPostById = async ({postId, set}: { postId: number | null, set: any }) => {
+        if(!postId)
+            return null;
+
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {method: 'GET'});
+        const post: any = await response.json();
+        if (post) {
+            const mockPublication = this.getPublicationsById(post.id);
+            set({
+                    postId: post.id,
+                    title: post.title,
+                    datePublication: mockPublication.datePublication,
+                    userName: mockPublication.userName,
+                    tag: mockPublication.tag,
+                    photoUrl: mockPublication.photoUrl,
+                    countComments: mockPublication.countComments,
+                    annotation: mockPublication.annotation
+                }
+            )
+        }
+        else {
+            set(this.defaultPublication)
+        }
+    };
 
 
     public getPublications(count: number) {

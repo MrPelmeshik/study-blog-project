@@ -12,9 +12,8 @@ export const GridPublication: React.FC<{setModalWindow:  React.Dispatch<React.Se
     const [contentService, setContentService] = useState(new ContentService());
     const [publications, setPublications] = useState<IPublication[] | null>(null);
     useEffect(() => {
-        contentService.getAllPosts({set: setPublications})
-    }, [setPublications])
-    // const publications = contentService.getPublications(countPublicationOnPage);
+        contentService.getPosts({set: setPublications})
+    }, [/* тут дб номера страниц */])
 
     const publicationsOnPage: ReactElement<{ post: IPublication }>[] = [];
     if(publications) {

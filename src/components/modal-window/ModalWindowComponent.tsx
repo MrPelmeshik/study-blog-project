@@ -8,10 +8,12 @@ import {IPublication} from "../main-content/publication/Publication.module";
 
 export const ModalWindowComponent: React.FC<{postId: number | null, setModalWindow:  React.Dispatch<React.SetStateAction<number | null>>}> = ({postId, setModalWindow}) => {
     const [contentService, setContentService] = useState(new ContentService());
+    const [post, setPublications] = useState<IPublication | null>(null);
+    useEffect(() => {
+        contentService.getPostById({postId: postId, set: setPublications})
+    }, [postId])
 
-    if (postId) {
-        const post = contentService.getPublicationsById(postId)
-
+    if (postId && post) {
         const style = {
             width: '50vw',
             height: '70vh',
@@ -29,21 +31,24 @@ export const ModalWindowComponent: React.FC<{postId: number | null, setModalWind
                 </div>
                 <div className={css.modal_content}>
                     <div className={css.modal_header}>
-                        <div className={css.modal_tag}>{post?.tag}</div>
-                        <button className={css.modal_btn} onClick={() => setModalWindow(null)}>Close</button>
+                        <div className={css.modal_tag}>{post.tag}</div>
+                        <button className={css.modal_btn} onClick={() => {
+                            setPublications(null);
+                            setModalWindow(null);
+                        }}>Close</button>
                     </div>
-                    <h1>{post?.title}</h1>
+                    <h1>{post.title}</h1>
                     <div className={css.modal_meta_block}>
-                        <div>Comments: {post?.countComments}</div>
+                        <div>Comments: {post.countComments}</div>
                         <div className={css.modal_meta}>
-                            {post?.datePublication}
+                            {post.datePublication}
                             <p className={indexCss.padding_h_xs}>
-                                <span className={textCss.text_lightgray}>By</span> {post?.userName}
+                                <span className={textCss.text_lightgray}>By</span> {post.userName}
                             </p>
                         </div>
                     </div>
                     <p>
-                        {post?.annotation}
+                        {post.annotation}
                     </p>
                 </div>
             </div>
