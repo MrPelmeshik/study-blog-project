@@ -1,14 +1,19 @@
 import React from "react";
 import css from './GridControlBlock.module.css';
 
-export const GridControlBlock = () => {
+const _limitPage = 8;
+
+export const GridControlBlock: React.FC<{page: number, setPage:  React.Dispatch<React.SetStateAction<number>>}> = ({page, setPage}) => {
+    let controlPanel: any[] = [];
+    controlPanel.push(<button disabled={page === 1} onClick={() => setPage(1)}>1</button>)
+    controlPanel.push(<button disabled>...</button>)
+    controlPanel.push(<button disabled>{page}</button>)
+    controlPanel.push(<button disabled>...</button>)
+    controlPanel.push(<button disabled={page === _limitPage} onClick={() => setPage(1)}>{_limitPage}</button>)
+
     return <div className={css.grid_control_block}>
-        <button disabled>&#10094; OLDER POST</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button disabled>...</button>
-        <button>8</button>
-        <button>NEXT POST &#10095;</button>
+        <button disabled={page <= 1} onClick={() => setPage(page--)}>&#10094; OLDER POST</button>
+        {controlPanel}
+        <button disabled={page >= _limitPage} onClick={() => setPage(page++)}>NEXT POST &#10095;</button>
     </div>
 };

@@ -1,16 +1,15 @@
 import React, {ReactElement, useEffect, useState} from "react";
 import css from '../Sidebar.module.css';
-import {ContentService} from "../../../ContentService";
+import {ContentService, getAllPosts} from "../../../ContentService";
 import {IPublication, PostS} from "../../publication/Publication.module";
 
 
 const countFeaturedPublicationsInSidebar = 3;
 
 export const FeaturedPublication: React.FC<{setModalWindow:  React.Dispatch<React.SetStateAction<number | null>>}> = ({setModalWindow}) => {
-    const [contentService, setContentService] = useState(new ContentService());
     const [publications, setPublications] = useState<IPublication[] | null>(null);
     useEffect(() => {
-        contentService.getPosts({set: setPublications})
+        getAllPosts({page: 1, set: setPublications})
     }, [/* тут дб номера страниц */])
 
     const featuredPublicationsInSidebar: ReactElement<{ post: IPublication }>[] = [];

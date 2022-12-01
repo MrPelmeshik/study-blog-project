@@ -1,16 +1,15 @@
 import React, {useEffect, useState} from "react";
 import css from './ModalWindowComponent.module.css';
-import {ContentService} from "../ContentService";
+import {ContentService, getPostById} from "../ContentService";
 import textCss from "../../text.module.css";
 import indexCss from "../../index.module.css";
 import {IPublication} from "../main-content/publication/Publication.module";
 
 
 export const ModalWindowComponent: React.FC<{postId: number | null, setModalWindow:  React.Dispatch<React.SetStateAction<number | null>>}> = ({postId, setModalWindow}) => {
-    const [contentService, setContentService] = useState(new ContentService());
     const [post, setPublications] = useState<IPublication | null>(null);
     useEffect(() => {
-        contentService.getPostById({postId: postId, set: setPublications})
+        getPostById({postId: postId, set: setPublications})
     }, [postId])
 
     if (postId && post) {

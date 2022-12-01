@@ -48,6 +48,270 @@ export const fetchGetRandomQuote = (): Promise<any> => {
     ).then((response) => response.json());
 };
 
+
+const _publications: IPublication[] = [
+    {
+        postId: 15,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'Tourism',
+        photoUrl: bitmap_0,
+        countComments: 10,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 1,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'sport',
+        photoUrl: bitmap_1,
+        countComments: 10,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 2,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'fashion',
+        photoUrl: bitmap_2,
+        countComments: 20,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 3,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'clothes',
+        photoUrl: bitmap_3,
+        countComments: 10,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 4,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'clothes',
+        photoUrl: bitmap_4,
+        countComments: 80,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 5,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'fashion',
+        photoUrl: bitmap_5,
+        countComments: 70,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 6,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'Summer',
+        photoUrl: bitmap_6,
+        countComments: 6,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 7,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'Autumn',
+        photoUrl: bitmap_7,
+        countComments: 50,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 8,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'clothes',
+        photoUrl: bitmap_8,
+        countComments: 30,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 9,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'summer',
+        photoUrl: bitmap_9,
+        countComments: 20,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 10,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'summer',
+        photoUrl: bitmap_10,
+        countComments: 10,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    }
+];
+const _featuredPublications: IPublication[] = [
+    {
+        postId: 11,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'jeans',
+        photoUrl: bitmap_11,
+        countComments: 12,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 12,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'City',
+        photoUrl: bitmap_13,
+        countComments: 20,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    },
+    {
+        postId: 13,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Rickie Baroch',
+        tag: 'Photography',
+        photoUrl: bitmap_14,
+        countComments: 10,
+        annotation: "Sed ut perspiciatis unde omnis iste natus error sit\n" +
+            "voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus\n" +
+            "error sit voluptatem accusantium doloremque laudantium, totam rem"
+    }
+];
+const _aboutAuthorPublications: IPublication[] = [
+    {
+        postId: 14,
+        title: 'One of Saturn’s largest rings may be newer than anyone',
+        datePublication: 'June 6, 2019',
+        userName: 'Kate Willems',
+        tag: 'Food & cooking bloger',
+        photoUrl: bitmap_12,
+        countComments: 40,
+        annotation: "Hi, I'm Sonia. Cooking is the way I express my creative\n" +
+            "side to the world. Welcome to my Kitchen Corner on…"
+    }
+];
+const _defaultPublication: IPublication = {
+    postId: 0,
+    title: 'Упс, пост с таким айди не найден...',
+    datePublication: 'June 6, 2019',
+    userName: 'Нет пользователя',
+    tag: 'Отсутствует',
+    photoUrl: '',
+    countComments: 0,
+    annotation: "Такой публикации нет!"
+}
+
+const getPublicationsById = (id: number) => {
+    return _publications.filter(publication => publication.postId === id)[0] ??
+        _featuredPublications.filter(publication => publication.postId === id)[0] ??
+        _aboutAuthorPublications.filter(publication => publication.postId === id)[0] ??
+        _defaultPublication;
+}
+
+export const getAllPosts = ({page, set}: { page:number, set: any }) => {
+    return fetch(`https://jsonplaceholder.typicode.com/posts/`, {method: 'GET'})
+        .then<any[]>(response => response.json())
+        .then(jsonData => {
+            if (jsonData) {
+                const publicationList: IPublication[] = jsonData.map(post => {
+                    const mockPublication = getPublicationsById(post.id%11+1);
+                    return {
+                        postId: post.id,
+                        title: post.title,
+                        datePublication: mockPublication.datePublication,
+                        userName: mockPublication.userName,
+                        tag: mockPublication.tag,
+                        photoUrl: mockPublication.photoUrl,
+                        countComments: mockPublication.countComments,
+                        annotation: mockPublication.annotation
+                    }
+                })
+
+                let res: IPublication[] = [];
+                let i = 0;
+                for(let i = (page*11)-1; i < (page*11)-1+11; i++){
+                    res.push(publicationList[i])
+                }
+                set(res);
+            }
+            else {
+                set(_defaultPublication)
+            }
+        })
+        .catch(errMsg => console.warn(errMsg))
+};
+
+export const getPostById = ({postId, set}: { postId: number | null, set: any }) => {
+    if(postId)
+        return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {method: 'GET'})
+            .then(response => response.json())
+            .then(post => {
+                if (post) {
+                    const mockPublication = getPublicationsById(post.id%11+1);
+                    set({
+                            postId: post.id,
+                            title: post.title,
+                            datePublication: mockPublication.datePublication,
+                            userName: mockPublication.userName,
+                            tag: mockPublication.tag,
+                            photoUrl: mockPublication.photoUrl,
+                            countComments: mockPublication.countComments,
+                            annotation: mockPublication.annotation
+                        }
+                    )
+                }
+                else {
+                    set(_defaultPublication)
+                }
+            })
+            .catch(errMsg => console.warn(errMsg))
+};
+
+
 export class ContentService {
 
     readonly _publications: IPublication[] = [
@@ -406,12 +670,12 @@ export class ContentService {
     }
 
 
-    public getPosts = async ({set}: { set: any }) => {
+    public getPosts = async ({page, set}: { page:number, set: any }) => {
         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/`, {method: 'GET'});
         const jsonData: any[] = await response.json();
         if (jsonData) {
-            set(jsonData.map(post => {
-                const mockPublication = this.getPublicationsById(post.id);
+            const publicationList = jsonData.map(post => {
+                const mockPublication = this.getPublicationsById(post.id%11);
                 return {
                     postId: post.id,
                     title: post.title,
@@ -422,7 +686,10 @@ export class ContentService {
                     countComments: mockPublication.countComments,
                     annotation: mockPublication.annotation
                 }
-            }))
+            })
+            console.log(`jsonData`, jsonData);
+            console.log(`publicationList.slice((${page} - 1)*11, 11)`, publicationList.slice((page - 1)*11, 11));
+            set(publicationList.slice((page - 1)*11, 11))
         }
         else {
             set(this.defaultPublication)
