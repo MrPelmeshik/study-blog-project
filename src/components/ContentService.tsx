@@ -3,7 +3,7 @@ import {IPublication} from "./main-content/publication/Publication.module";
 import {ICategory} from "./main-content/sidebar/categories/ICategory";
 import {ISocialMedia} from "./main-content/sidebar/social-media/ISocialMedia";
 import {ITag} from "./main-content/sidebar/tags/ITag";
-import {IInstagramWidget} from "./instagram-block/widget/InstagramWidget";
+import {IInstagramWidget} from "./instagram-block/InstagramBlock";
 
 // region import photo
 import bitmap_0 from '../images/posts/Bitmap (0).png';

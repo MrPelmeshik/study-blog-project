@@ -1,0 +1,17 @@
+
+.social_media_item {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--color_darkwhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ico_s {
+    margin: 0.2vh;
+    width: var(--v__2);
+    height: var(--v__2);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -52,15 +52,6 @@
 
     color: var(--color_lightgray);
 }
-.social_media_item {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background-color: var(--color_darkwhite);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .tags {
     margin-top: var(--v__2);
@@ -79,12 +70,4 @@
     margin: var(--v__0_5);
     background-color: var(--color_darkwhite);
     padding: var(--v__1) var(--h__0_5);
-}
-
-.ico_s {
-    margin: 0.2vh;
-    width: var(--v__2);
-    height: var(--v__2);
-    background-repeat: no-repeat;
-    background-size: cover;
 }

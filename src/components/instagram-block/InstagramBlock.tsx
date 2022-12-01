@@ -1,8 +1,12 @@
 import React, {useState} from "react";
-import css from './InstagramBlock.module.css'
-import {InstagramWidget} from "./widget/InstagramWidget";
+import css from './InstagramBlock.module.css';
 import {ContentService} from "../ContentService";
 
+
+export interface IInstagramWidget {
+    instagramWidgetId: number;
+    photoUrl: string;
+}
 
 const countInstagramWidgetsInSidebar = 6;
 
@@ -12,7 +16,19 @@ export const InstagramBlock = () => {
 
     const instagramWidgetsInSidebar: any[] = [];
     for (let i = 0; i < countInstagramWidgetsInSidebar; i++) {
-        instagramWidgetsInSidebar.push(<InstagramWidget key={instagramWidgets[i].instagramWidgetId} instagramWidget={instagramWidgets[i]}/>);
+        instagramWidgetsInSidebar.push(
+            <div className={css.instagram_widget}>
+                <div className={css.img_box}>
+                    <img src={instagramWidgets[i].photoUrl}/>
+                </div>
+                <div className={css.content}>
+                    <div>
+                        <h2>Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deleniti dolor et hic modi nulla officia repellat ullam voluptas voluptatum.</p>
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return <div>
