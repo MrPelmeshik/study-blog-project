@@ -14,7 +14,7 @@ export const GridControlBlock: React.FC<{page: number, setPage:  React.Dispatch<
         controlPanel.push(<button disabled>...</button>)
         controlPanel.push(<button disabled={page === _limitPage} onClick={() => setPage(_limitPage)}>{_limitPage}</button>)
     }
-    else if (page > 2 && page < 6) {
+    else if (page > 2 && page < _limitPage - 2) {
         // 2 3 4 ... 8
         // _ 5 6 ... 8
 
